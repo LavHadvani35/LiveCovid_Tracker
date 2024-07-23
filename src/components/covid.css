@@ -1,0 +1,100 @@
+/* General styles for the section */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+}
+
+/* Styles for the main heading */
+h1 {
+    font-size: 2.5rem;
+    color: red;
+}
+
+/* Styles for the subheading */
+h2 {
+    font-size: 1.5rem;
+    color: blue;
+    margin-bottom: 50px;
+}
+
+/* Styles for the list of cards */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    /* Center align items horizontally */
+}
+
+/* Styles for individual card items */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    /* Set a fixed width for cards */
+    padding: 50px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin-bottom: 10px;
+    /* Ensure each card has the same size and spacing */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Styles for the card inner content */
+.card_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styles for the card name */
+.card_name {
+    font-size: 1rem;
+    color: darkorange;
+    margin-bottom: 20px;
+}
+
+/* Styles for the card name span elements */
+.card_name span {
+    font-weight: bold;
+    color: green;
+}
+
+/* Styles for the card total numbers */
+.card_total {
+    font-size: 1.2rem;
+    color: black;
+}
+
+/* Styles for the card total numbers with small text */
+.card_small {
+    font-size: 1rem;
+}
+
+/* Additional styles to ensure 3 cards per row */
+@media (min-width: 768px) {
+    ul {
+        /* Set flex basis to ensure 3 cards per row */
+        flex-basis: calc(33.333% - 20px);
+        /* Adjust based on gap */
+    }
+}
+
+@media (max-width: 768px) {
+    ul {
+        /* Stack cards vertically on smaller screens */
+        flex-direction: column;
+        align-items: center;
+    }
+}
